@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+    .row.content {height: 1500px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height: auto;} 
+    }
+  </style>
+</head>
+<body>
+
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-3 sidenav">
+      <h4>Munee's Blog</h4>
+      <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="http://angsila.cs.buu.ac.th/~58660099/887371/lab03/lab03.html#section3">HOME</a></li>
+        <li><a href="http://angsila.cs.buu.ac.th/~58660099/887371/lab03/Grid.html">GRID</a></li>
+        <li><a href="http://angsila.cs.buu.ac.th/~58660099/887371/lab03/Form.html">FORM</a></li>
+     
+      </ul><br>
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search Blog..">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button">
+            <span class="glyphicon glyphicon-search"></span>
+          </button>
+        </span>
+      </div>
+    </div>
+
+    <div class="col-sm-9">
+      <h4><small>RECENT POSTS</small></h4>
+      <hr>
+      <h2>การใช้งาน Form</h2>
+      <h5><span class="glyphicon glyphicon-time"></span></h5>
+      <h5><span class="label label-danger">Form</span> <span class="label label-primary">Learn</span></h5><br>
+      <p><h1 class="entry-title">FORM</h1>    
+
+
+  <div class="entry-content clearfix">
+    <p>เรามาดูการสร้าง ฟอร์มรับข้อมูลโดยใช้ความสามารถของ Bootstrap3 มาเป็นตัวช่วยกันนะคะ</p>
+<p><span id="more-1972"></span></p>
+<p><a href="https://i2.wp.com/teerapuch.com/wp-content/uploads/2014/04/bootstrap-3-image-classes.jpg"><img data-attachment-id="1922" data-permalink="http://teerapuch.com/2014/coding/html-css/%e0%b8%a7%e0%b8%b4%e0%b8%98%e0%b8%b5%e0%b8%9b%e0%b8%b4%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b9%83%e0%b8%8a%e0%b9%89%e0%b8%87%e0%b8%b2%e0%b8%99-disable-responsive-%e0%b8%82%e0%b8%ad%e0%b8%87-bootstra/attachment/bootstrap-3-image-classes/" data-orig-file="https://i2.wp.com/teerapuch.com/wp-content/uploads/2014/04/bootstrap-3-image-classes.jpg?fit=500%2C336" data-orig-size="500,336" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;2.4&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;iPhone 4S&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;1377092256&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;4.28&quot;,&quot;iso&quot;:&quot;80&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;1&quot;}" data-image-title="Bootstrap" data-image-description="&lt;p&gt;Bootstrap&lt;/p&gt;
+" data-medium-file="https://i2.wp.com/teerapuch.com/wp-content/uploads/2014/04/bootstrap-3-image-classes.jpg?fit=300%2C202" data-large-file="https://i2.wp.com/teerapuch.com/wp-content/uploads/2014/04/bootstrap-3-image-classes.jpg?fit=500%2C336" class="aligncenter size-large wp-image-1922" src="https://i2.wp.com/teerapuch.com/wp-content/uploads/2014/04/bootstrap-3-image-classes.jpg?resize=470%2C315" alt="Bootstrap" srcset="https://i2.wp.com/teerapuch.com/wp-content/uploads/2014/04/bootstrap-3-image-classes.jpg?w=500 500w, https://i2.wp.com/teerapuch.com/wp-content/uploads/2014/04/bootstrap-3-image-classes.jpg?resize=300%2C202 300w" sizes="(max-width: 470px) 100vw, 470px" data-recalc-dims="1"/></a></p>
+<p>อันดับแรกเลยมาดูกันก่อนว่าทาง Bootstrap เค้าเตรียมลักษณะของ Class อะไรบ้างมาไว้ช่วยเรา</p>
+<p>เริ่มต้นกันด้วยเมื่อคุณสร้าง &lt;form&gt; ขึ้นมาให้คุณเติม <span class="na">role=</span><span class="s">&#8220;form&#8221; ลงไปก่อนแบบนี้</span></p>
+<p><code class="html"><span class="nt">&lt;form</span> <span class="na">role=</span><span class="s">"form"&gt;</span></code></p>
+<p>&lt;/form&gt;</p>
+<p>แล้วคุณก็เลือกว่าจะสร้าง form แบบ inline หรือแบบ Horizintal ซึ่งทำได้โดยการเติม class ลงไปใน Tag form</p>
+<pre><code class="html"><span class="nt">&lt;form</span> <span class="na">role=</span><span class="s">"form" </span></code><span class="na">class=</span><span class="s">"form-inline"</span>&gt;</pre>
+<pre>&lt;/form&gt;</pre>
+<p>หรือ</p>
+<pre><code class="html"><span class="nt">&lt;form</span> <span class="na">role=</span><span class="s">"form" </span></code><span class="na">class=</span><span class="s">"form-horizontal"</span>&gt;</pre>
+<pre>&lt;/form&gt;</pre>
+<p>&nbsp;</p>
+<p>จากนั้นก็ให้คุณวาง &lt;div&gt; เป็น Layout ของ Form ได้เลยดยใน &lt;div&gt; ให้คุณเติม class ที่ชื่อว่า form-group ลงไป</p>
+<pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span></code></pre>
+<pre><code class="html"><span class="nt">&lt;/div&gt;</span></code></pre>
+<p>แล้วคุณต้องการให้กล่องมีความยาวขนาดไหนก็สามารถกำหนดได้ที่ตรงนี้เพราะพื้นฐานแล้วทาง bootstrap จะทำมาให้แบบเต็มจอ ดังนั้นคุณต้องมากำหนดขนาดของกล่องต่างๆที่ div ที่ครอบอยู่แบบนี้</p>
+<pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"inputEmail3"</span> <span class="na">class=</span><span class="s">"col-sm-2"</span><span class="nt">&gt;</span>Email<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-10"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"email"</span> <span class="na">class=</span><span class="s">"form-control"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre>
+<p>จากนั้นคุณก็สามารถใส่ input ต่างๆลงไปได้เลย ซึ่งมีตัวอย่างตามนี้</p>
+<p>Taxt Box</p>
+<pre><code class="html"><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">placeholder=</span><span class="s">"Text input"</span><span class="nt">&gt;</span></code></pre>
+<p>Textarea</p>
+<pre><code class="html"><span class="nt">&lt;textarea</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">rows=</span><span class="s">"3"</span><span class="nt">&gt;&lt;/textarea&gt;</span></code></pre>
+<p>Checkboxes</p>
+<pre><code class="html"> <span class="nt">&lt;label&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;</span>
+    Option one
+  <span class="nt">&lt;/label&gt;</span></code></pre>
+<p>Radios</p>
+<pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"radio"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"optionsRadios"</span> <span class="na">value=</span><span class="s">"option1"</span><span class="nt">&gt;</span>
+    Option one 
+  <span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;
+
+</span></code></pre>
+<p>Selects</p>
+<pre><code class="html"><span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"form-control"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;option&gt;</span>1<span class="nt">&lt;/option&gt;</span>
+  <span class="nt">&lt;option&gt;</span>2<span class="nt">&lt;/option&gt;</span>
+  <span class="nt">&lt;option&gt;</span>3<span class="nt">&lt;/option&gt;</span>
+  <span class="nt">&lt;option&gt;</span>4<span class="nt">&lt;/option&gt;</span>
+  <span class="nt">&lt;option&gt;</span>5<span class="nt">&lt;/option&gt;</span>
+<span class="nt">&lt;/select&gt;</span></code></pre>
+<p>Select Multiple</p>
+<pre><code class="html"><span class="nt">&lt;select</span> <span class="na">multiple</span> <span class="na">class=</span><span class="s">"form-control"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;option&gt;</span>1<span class="nt">&lt;/option&gt;</span>
+  <span class="nt">&lt;option&gt;</span>2<span class="nt">&lt;/option&gt;</span>
+  <span class="nt">&lt;option&gt;</span>3<span class="nt">&lt;/option&gt;</span>
+  <span class="nt">&lt;option&gt;</span>4<span class="nt">&lt;/option&gt;</span>
+  <span class="nt">&lt;option&gt;</span>5<span class="nt">&lt;/option&gt;</span>
+<span class="nt">&lt;/select&gt;</span></code></pre>
+<p>Input Type ต่างๆของทาง Bootstrap นั้นรองรับ HTML5 ดังนั้นพวก input ที่ใช้ได้ก็จะมี</p>
+<p>Text , password , datetime , date , month , time , week , number , email , url , search , tel , color</p>
+<p>ซึ่งสะดวกมากทำให้เราไม่ต้องมานั่งทำปฏิทินให้ผู้ใช้เลือกแค่เลือก type เป็น date ก็ได้แล้ว</p>
+<p>และถ้าอยากได้ข้อความช่วยใต้กล่องก็ใช้ class help-block ช่วยได้ค่ะ</p>
+<p>มาลองดูตัวอย่าง form สักแบบ</p>
+<div id="attachment_1974" style="width: 480px" class="wp-caption aligncenter"><a href="https://i0.wp.com/teerapuch.com/wp-content/uploads/2014/06/viewing-snippet-simple-registration-form-bootsnipp-com.png"><img data-attachment-id="1974" data-permalink="http://teerapuch.com/2014/coding/html-css/%e0%b8%aa%e0%b8%a3%e0%b9%89%e0%b8%b2%e0%b8%87-form-%e0%b8%a3%e0%b8%b1%e0%b8%9a%e0%b8%82%e0%b9%89%e0%b8%ad%e0%b8%a1%e0%b8%b9%e0%b8%a5%e0%b8%94%e0%b9%89%e0%b8%a7%e0%b8%a2-bootstrap-3/attachment/viewing-snippet-simple-registration-form-bootsnipp-com/" data-orig-file="https://i0.wp.com/teerapuch.com/wp-content/uploads/2014/06/viewing-snippet-simple-registration-form-bootsnipp-com.png?fit=760%2C434" data-orig-size="760,434" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="Registration form" data-image-description="&lt;p&gt;Registration form&lt;/p&gt;
+" data-medium-file="https://i0.wp.com/teerapuch.com/wp-content/uploads/2014/06/viewing-snippet-simple-registration-form-bootsnipp-com.png?fit=300%2C171" data-large-file="https://i0.wp.com/teerapuch.com/wp-content/uploads/2014/06/viewing-snippet-simple-registration-form-bootsnipp-com.png?fit=760%2C434" class="size-large wp-image-1974" src="https://i0.wp.com/teerapuch.com/wp-content/uploads/2014/06/viewing-snippet-simple-registration-form-bootsnipp-com.png?resize=470%2C268" alt="Registration form" srcset="https://i0.wp.com/teerapuch.com/wp-content/uploads/2014/06/viewing-snippet-simple-registration-form-bootsnipp-com.png?w=760 760w, https://i0.wp.com/teerapuch.com/wp-content/uploads/2014/06/viewing-snippet-simple-registration-form-bootsnipp-com.png?resize=300%2C171 300w" sizes="(max-width: 470px) 100vw, 470px" data-recalc-dims="1"/></a><p class="wp-caption-text">Registration form</p></div>
+<p>Code ที่ใช้จะเป็น</p>
+<pre>&lt;form class="form-horizontal" action='' method="POST"&gt;
+ &lt;fieldset&gt;
+ &lt;div id="legend"&gt;
+ &lt;legend class=""&gt;Register&lt;/legend&gt;
+ &lt;/div&gt;
+ &lt;div class="control-group"&gt;
+ &lt;!-- Username --&gt;
+ &lt;label class="control-label" for="username"&gt;Username&lt;/label&gt;
+ &lt;div class="controls"&gt;
+ &lt;input type="text" id="username" name="username" placeholder="" class="input-xlarge"&gt;
+ &lt;p class="help-block"&gt;Username can contain any letters or numbers, without spaces&lt;/p&gt;
+ &lt;/div&gt;
+ &lt;/div&gt;
+ 
+ &lt;div class="control-group"&gt;
+ &lt;!-- E-mail --&gt;
+ &lt;label class="control-label" for="email"&gt;E-mail&lt;/label&gt;
+ &lt;div class="controls"&gt;
+ &lt;input type="text" id="email" name="email" placeholder="" class="input-xlarge"&gt;
+ &lt;p class="help-block"&gt;Please provide your E-mail&lt;/p&gt;
+ &lt;/div&gt;
+ &lt;/div&gt;
+ 
+ &lt;div class="control-group"&gt;
+ &lt;!-- Password--&gt;
+ &lt;label class="control-label" for="password"&gt;Password&lt;/label&gt;
+ &lt;div class="controls"&gt;
+ &lt;input type="password" id="password" name="password" placeholder="" class="input-xlarge"&gt;
+ &lt;p class="help-block"&gt;Password should be at least 4 characters&lt;/p&gt;
+ &lt;/div&gt;
+ &lt;/div&gt;
+ 
+ &lt;div class="control-group"&gt;
+ &lt;!-- Password --&gt;
+ &lt;label class="control-label" for="password_confirm"&gt;Password (Confirm)&lt;/label&gt;
+ &lt;div class="controls"&gt;
+ &lt;input type="password" id="password_confirm" name="password_confirm" placeholder="" class="input-xlarge"&gt;
+ &lt;p class="help-block"&gt;Please confirm password&lt;/p&gt;
+ &lt;/div&gt;
+ &lt;/div&gt;
+ 
+ &lt;div class="control-group"&gt;
+ &lt;!-- Button --&gt;
+ &lt;div class="controls"&gt;
+ &lt;button class="btn btn-success"&gt;Register&lt;/button&gt;
+ &lt;/div&gt;
+ &lt;/div&gt;
+ &lt;/fieldset&gt;
+&lt;/form&gt;</pre>
+     
+     
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid">
+  <p>APINYA SANGMARN</p>
+</footer>
+
+</body>
+</html>

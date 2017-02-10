@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+    .row.content {height: 1500px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height: auto;} 
+    }
+  </style>
+</head>
+<body>
+
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-3 sidenav">
+      <h4>Munee's Blog</h4>
+      <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="http://angsila.cs.buu.ac.th/~58660099/887371/lab03/lab03.html">HOME</a></li>
+        <li><a href="http://angsila.cs.buu.ac.th/~58660099/887371/lab03/Grid.html">GRID</a></li>
+        <li><a href="http://angsila.cs.buu.ac.th/~58660099/887371/lab03/Form.html">FORM</a></li>
+     
+      </ul><br>
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search Blog..">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button">
+            <span class="glyphicon glyphicon-search"></span>
+          </button>
+        </span>
+      </div>
+    </div>
+
+    <div class="col-sm-9">
+      <h4><small>RECENT POSTS</small></h4>
+      <hr>
+      <h2>การใช้งาน Grid</h2>
+      <h5><span class="glyphicon glyphicon-time"></span></h5>
+      <h5><span class="label label-danger">Grid</span> <span class="label label-primary">Learn</span></h5><br>
+      <p><h1 class="entry-title"> Grid System</h1>    
+
+
+  <div class="entry-content clearfix">
+    <p>ในการแสดงผลของ web นั้นในอดีตแสดงให้แก่หน้าจอน้อยประเภท ส่วนใหญ่คือหน้าจอ pc หรือไม่ก็ notebook ไม่ได้หลากหลายเท่าปัจจุบัน ในปัจจุบันมีขนาดหน้าจอเพิ่มขึ้น ไม่ว่าจะเป็น tablet หรือ smart phone ทำให้ web ที่ได้ทำการพัฒนาขึ้นต้องรองรับในความหลากหลายนี้ให้ได้ Bootstrap ก็เช่นกัน เนื่องจาก Bootstrap เป็นเครื่องมือในการสร้าง web แบบ responsive ด้วย ทำให้ขาดคุณสมบัติเกี่ยวกับการแสดงผลในหน้าจอที่มีขนาดที่หลากหลายไปไม่ได้ และต้องรองรับความแตกต่างของหน้าจอให้ได้</p>
+<p>Bootstrap ได้ใช้หลักการซอยย่อยหน้าจอเป็นส่วนๆ โดยแต่ละส่วนนั้นเป็นแนวตั้ง หรือที่เรียกว่า คอลัมภ์ โดยมี 12 กล่อง ขนาดเท่าๆกัน </p>
+
+<p>ซึ่งในแต่ละ row จะมีกี่ column ก็ได้ แต่ทั้งแถวต้องมีขนาด column รวมกันเท่ากับ 12 เท่านั้น และ row ต่างกัน ไม่จำเป็นต้องมีจำนวน  column เท่ากัน Bootstrap ให้อิสระในการวาง layout อย่างเต็มที่ แต่ทุก column ต้องอยู่ภายใต row และแต่ละ row จะมีความสูงต่างกันได้ ขึ้นอยู่กับข้อมูลที่ใส่ใน column นั้นๆ</p>
+<p>นั้นเรามาเริ่มต้นใช้งาน grid กันเลย grid นั้น ส่วนใหญ่จะนำมาสร้าง layout ของ web แทน frame แทน table ในอดีตครับ ซึ่ง grid นั้นจะใช้ &lt;div&gt; ในการวาง layout และมีการไปเรียก class ที่ Bootstrap ได้กำหนดไว้แล้ว โดยลำดับแรกต้องสร้างกล่องสำหรับบรรจุของได้ ถ้าพูดง่ายๆ ก็คือการประกาศบริเวณ เหมือนกับการสร้าง &lt;table&gt;&lt;/table&gt; นั่นแหละครับ ซึ่งในที่นี้ใช้  class container หรือ container-fluid โดย container นั้นเป็นแบบ fixed ความกว้าง คือจะกำหนดความกว้างมาตามขนาดของหน้าจอเลย ส่วน container-fluid จะใช้การกำหนดความกว้างแบบ full-width ซึ่งก็คือใช้แบบ %  ดังตัวอย่าง code ด้านล่างค<br />
+<code>&lt;div class="container"&gt;....&lt;/div&gt;</code><br />
+ขั้นตอนต่อไปก็คือกำหนด row ให้กล่องใหญ่ ซึ่งคล้ายกับการใช้ &lt;tr&gt; ของ html แต่ใน Bootstrap จะใช้ class row แทน ดัง code ต่อไปนี้<br />
+<code>&lt;div class="container"&gt;</code><br />
+<code>&lt;div class="row"&gt;....&lt;/div&gt;</code><br />
+<code>&lt;/div&gt;</code></p>
+<p>ต่อไปเราก็ต้องสร้างกล่อง column ภายใต้ row เปรียบกับ &lt;table&gt; ก็คือ &lt;td&gt; นั่นแหละครับ ซึ่งตรงนี้เป็นที่เดียวที่ควรใส่ content ต่างๆ ลงไป (จริงๆ ก็อิงจาก table มาเลย) class css ที่ Bootstrap ใช้สำหรับกำหนดขนาด column นั้น จะอิงตามจำนวน grid พูดง่ายๆ ก็คือ มี 12 ขนาด จำนวนรวมของขนาดของทุก column ต้องเท่ากับ 12 ถ้าเกิน column ที่ทำให้ขนาดเกินจะตกไปอีกบรรทัดหนึ่ง และอาจทำให้การแสดงผล layout ไม่ตรงกับที่ต้องการได้</p>
+<p>class ที่ใช้จะขึ้นต้นด้วย col- เสมอ และตามด้วยประเภทของขนาดหน้าจอ ซึ่งมี 4 ประเภท แล้วตามด้วยเลขที่บ่งบอกขนาดของ column นั้นๆ ซึ่งจะมีตั้งแต่ 1-12 โดยประเภทของหน้าจอทั้ง 4 ประเภทมีดังต่อไปนี้</p>
+<table border="1">
+<thead>
+<tr>
+<th>class</th>
+<th>ประเภทหน้าจอ</th>
+<th>ขนาดหน้าจอ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.col-xs-</td>
+<td>Smart Phone</td>
+<td>&lt;768px</td>
+</tr>
+<tr>
+<td>.col-sm-</td>
+<td>Tablet</td>
+<td><span style="color: #222222;">≥</span>768px</td>
+</tr>
+<tr>
+<td>.col-md-</td>
+<td>Desktop ขนาดกลาง</td>
+<td><span style="color: #222222;">≥992</span>px</td>
+</tr>
+<tr>
+<td>.col-lg-</td>
+<td>Desktop ขนาดใหญ่</td>
+<td><span style="color: #222222;">≥1200</span>px</td>
+</tr>
+</tbody>
+</table>
+<p>ถ้าเราต้องการกำหนดว่า row นั้นมี column เดียว จะต้องใช้กล่องขนาด 12 เลย ดัง code ต่อไปนี้<br />
+<code>&lt;div class="col-md-12"&gt;...&lt;/div&gt;</code></p>
+<p>ถ้าเราต้องการกำหนดว่า row นั้นมี 2 column ขนาดเท่าๆ กัน จะต้องใช้กล่องขนาด 6 จำนวน 2 กล่อง ดัง code ต่อไปนี้<br />
+<code>&lt;div class="col-md-6"&gt;...&lt;/div&gt;</code><br />
+<code>&lt;div class="col-md-6"&gt;...&lt;/div&gt;</code></p>
+<p>ถ้าเราต้องการกำหนดว่า row นั้นมี 2 column ขนาดไม่เท่ากัน จะต้องใช้กล่อง 2 กล่อง แต่ขนาดเป็น 8 4 หรือ 3 9 หรือเท่าใดก็ได้ แต่ต้องรวมให้ได้ 12 เช่น code ต่อไปนี้<br />
+<code>&lt;div class="col-md-8"&gt;...&lt;/div&gt;</code><br />
+<code>&lt;div class="col-md-4"&gt;...&lt;/div&gt;</code><br />
+เมื่อเรากำหนดกล่องตามด้านบนครบทั้ง 3 ขั้นตอนแล้ว เราก็จะได้ layout ของหน้า web ที่ต้องการ <br />
+<br />
+จากรูปด้านบน แปลงมาเป็น code ต่อไปนี้</p>
+<pre><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-1"</span><span class="nt">&gt;</span>.col-md-1<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-1"</span><span class="nt">&gt;</span>.col-md-1<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-1"</span><span class="nt">&gt;</span>.col-md-1<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-1"</span><span class="nt">&gt;</span>.col-md-1<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-1"</span><span class="nt">&gt;</span>.col-md-1<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-1"</span><span class="nt">&gt;</span>.col-md-1<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-1"</span><span class="nt">&gt;</span>.col-md-1<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-1"</span><span class="nt">&gt;</span>.col-md-1<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-1"</span><span class="nt">&gt;</span>.col-md-1<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-1"</span><span class="nt">&gt;</span>.col-md-1<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-1"</span><span class="nt">&gt;</span>.col-md-1<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-1"</span><span class="nt">&gt;</span>.col-md-1<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-8"</span><span class="nt">&gt;</span>.col-md-8<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-4"</span><span class="nt">&gt;</span>.col-md-4<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-4"</span><span class="nt">&gt;</span>.col-md-4<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-4"</span><span class="nt">&gt;</span>.col-md-4<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-4"</span><span class="nt">&gt;</span>.col-md-4<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-6"</span><span class="nt">&gt;</span>.col-md-6<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-6"</span><span class="nt">&gt;</span>.col-md-6<span class="nt">&lt;/div&gt;</span>
+
+     
+     
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid">
+  <p>APINYA SANGMARN</p>
+</footer>
+
+</body>
+</html>
